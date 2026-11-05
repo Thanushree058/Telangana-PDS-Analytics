@@ -1,0 +1,18 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+.ipynb_checkpoints/
+
+# Data (re-create with: python src/download_data.py && python src/run_pipeline.py)
+data/raw/
+data/processed/*.parquet
+data/processed/*.sqlite
+
+# Editors / OS
+.DS_Store
+Thumbs.db

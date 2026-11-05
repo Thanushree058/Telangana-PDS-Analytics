@@ -1,0 +1,11 @@
+{
+  // The virtual environment lives at a short path because this project's folder
+  // path is long and Windows limits paths to 260 characters.
+  "python.defaultInterpreterPath": "D:\\venvs\\telangana_pds\\Scripts\\python.exe",
+  "python.terminal.activateEnvironment": true,
+  "jupyter.notebookFileRoot": "${fileDirname}",
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "python.terminal.useEnvFile": true
+}
