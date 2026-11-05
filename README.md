@@ -76,7 +76,16 @@ In VS Code you can also use **Run and Debug** (Ctrl+Shift+D) → *Run pipeline* 
 
 ### MySQL / Workbench
 
-1. Copy `.env.example` to `.env` and put in your MySQL root password.
+1. Create a file named `.env` in the project folder with your MySQL details (it is git-ignored, so the
+   password never reaches GitHub):
+   ```
+   MYSQL_USER=root
+   MYSQL_PASSWORD=your_password_here
+   MYSQL_HOST=localhost
+   MYSQL_PORT=3306
+   PDS_DB_BACKEND=auto
+   ```
+   `PDS_DB_BACKEND` is optional: `auto` (MySQL, else a local SQLite copy), `mysql` or `sqlite`.
 2. `python src/load_to_mysql.py` creates the `telangana_pds` schema and loads about 570k rows.
 3. In MySQL Workbench, open `sql/02_analysis_queries.sql` and run the queries (Ctrl+Enter).
 4. Restart the dashboard. The sidebar should say **Data source: MySQL · telangana_pds**.

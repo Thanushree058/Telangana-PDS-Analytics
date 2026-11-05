@@ -1,7 +1,8 @@
 """
 Optional step - load the cleaned data into MySQL (view it in MySQL Workbench)
 ============================================================================
-1. Copy `.env.example` to `.env` and fill in your MySQL password.
+1. Create `.env` with MYSQL_USER / MYSQL_PASSWORD / MYSQL_HOST / MYSQL_PORT
+   (the README shows the exact format).
 2. Run the pipeline first:   python src/run_pipeline.py
 3. Then:                     python src/load_to_mysql.py
 
